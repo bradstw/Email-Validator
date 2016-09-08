@@ -39,7 +39,8 @@ $local_part = $rbody->parts->local_part;
 // Returned codes
 $return_code = $result->http_response_code;
 
-
+// Return code if there is an error
+echo $return_code;
 
 echo '<pre>';
 print_r($result);
