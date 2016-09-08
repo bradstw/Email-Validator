@@ -39,8 +39,13 @@ $local_part = $rbody->parts->local_part;
 // Returned codes
 $return_code = $result->http_response_code;
 
-// Return code if there is an error
-echo $return_code;
+// Check to see if the email passed in is valid, if not return the suggested edit
+if ($isValid == 1){
+	echo "valid:1";
+}else {
+	echo "valid:0"."alternate:".$c_address;
+}
+
 
 echo '<pre>';
 print_r($result);
