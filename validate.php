@@ -14,7 +14,7 @@ if ($email == '') {
 }
 
 # Instantiate the client.
-$mgClient = new Mailgun('pubkey-68a707a4571e0e52f2b8ab885f118182');
+$mgClient = new Mailgun('pubkey-');
 
 $validateAddress = $email;
 
@@ -40,17 +40,12 @@ $local_part = $rbody->parts->local_part;
 $return_code = $result->http_response_code;
 
 // Check to see if the email passed in is valid, if not return the suggested edit
-if ($isValid == 1){
+if ($isValid == 1) {
 	echo "valid:1";
-}else {
+} else {
 	echo "valid:0"."alternate:".$c_address;
 }
-
 
 echo '<pre>';
 print_r($result);
 echo '</pre>';
-
-
-
-?>
